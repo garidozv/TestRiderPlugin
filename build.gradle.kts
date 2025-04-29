@@ -146,7 +146,7 @@ dependencies {
 
         // TODO: add plugins
         // bundledPlugin("uml")
-        // bundledPlugin("com.jetbrains.ChooseRuntime:1.0.9")
+        bundledPlugin("org.jetbrains.plugins.terminal")
     }
 }
 

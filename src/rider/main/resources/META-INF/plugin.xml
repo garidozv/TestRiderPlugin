@@ -12,4 +12,29 @@
 ]]>
   </description>
 
+  <depends>org.jetbrains.plugins.terminal</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <projectService
+            serviceInterface="com.jetbrains.rider.plugins.ridertestplugin.services.PowerShellProcessService"
+            serviceImplementation="com.jetbrains.rider.plugins.ridertestplugin.services.PowerShellProcessServiceImpl"/>
+
+    <toolWindow id="ConsoleToolWindow"
+                factoryClass="com.jetbrains.rider.plugins.ridertestplugin.ConsoleToolWindowFactory"
+                anchor="bottom"
+                secondary="false"/>
+  </extensions>
+
+  <actions defaultExtensionNs="com.intellij">
+    <action id="TestPlugin.ClearConsole"
+            class="com.jetbrains.rider.plugins.ridertestplugin.actions.ClearConsoleAction"
+            text="Clear Console"
+            icon="AllIcons.Actions.ClearCash"/>
+
+    <action id="TestPlugin.StopConsoleExecution"
+            class="com.jetbrains.rider.plugins.ridertestplugin.actions.StopConsoleExecutionAction"
+            text="Stop Execution"
+            icon="AllIcons.Run.Stop"/>
+  </actions>
+
 </idea-plugin>
